@@ -9,19 +9,19 @@ describe('LikeButton', () => {
 
     test('renders a button with a string in it', () => {
         let button = component.find('button')
-        expect(button.text()).toContain('👍')
+        expect(button.text()).toContain('')
     })
     
     test('shows red background if not liked', () => {
         component.setState({ liked: false })
         let button = component.find('button')
-        expect(button.prop('style')).toHaveProperty('background', 'red')
+        expect(button.prop('style')).toHaveProperty('color', 'gray')
     })
 
     test('shows green background if liked', () => {
         component.setState({ liked: true })
         let button = component.find('button')
-        expect(button.prop('style')).toHaveProperty('background', 'green')
+        expect(button.prop('style')).toHaveProperty('color', 'orange')
     })
 
     test('toggles liked state when clicked', () => {

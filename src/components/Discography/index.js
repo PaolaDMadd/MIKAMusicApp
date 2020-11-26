@@ -34,7 +34,6 @@ class Discography extends Component{
                         <div className='recordContainer'>
                             <a href={album.linkToAlbum}><img className='resize' src={album.image} /></a>
                             <h1>{album.title}</h1>
-                            
                                 <ol>{album.songs.map((songs=>{
                                     return (
                                         <div className='songsList'>
